@@ -174,8 +174,6 @@ h2::before {
     color: #ffffff;
 }
 
-
-
 /* =========================
    BARRA DE NAVEGAÇÃO
 ========================= */
@@ -580,20 +578,6 @@ body::before{
   letter-spacing:2px;
 }
 
-#backTop{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:5000;
-  width:45px;height:45px;
-  border:1px solid #555;
-  background:#111;
-  color:#fff;
-  cursor:pointer;
-  font-size:20px;
-  box-shadow:0 6px 20px rgba(0,0,0,.5);
-}
-#backTop:hover{background:var(--f1-red);border-color:var(--f1-red)}
 
 @media(max-width:800px){
   .dashboard{grid-template-columns:repeat(2,1fr);padding:0 12px}
@@ -606,8 +590,6 @@ body::before{
   .glossary-grid{grid-template-columns:1fr}
   .timeline-row{grid-template-columns:65px 1fr}
 }
-
-
 
 /* ===== F1 EXTREME PACK ===== */
 .f1-launch{
@@ -747,8 +729,6 @@ body::before{
         </p>
 
     </header>
-
-
 
     <nav aria-label="Navegação pelos tópicos">
         <div class="nav-title">F1 // Technical Engineering</div>
@@ -1246,8 +1226,6 @@ body::before{
 
 <p><strong>Acelerômetros:</strong> Sensores podem medir as forças e acelerações sofridas pelo piloto.</p>
 
-
-
 <h2 id="topico29">29. Capitação e Dinâmica de Fluidos Transiente em Bombas</h2>
 
 <p>Com o carro submetido a grandes forças laterais, manter os fluidos circulando corretamente é um grande desafio.</p>
@@ -1429,9 +1407,6 @@ body::before{
 <footer class="footer-f1">
   F1 // ENGINEERING ARCHIVE &nbsp; • &nbsp; 32 TOPICS &nbsp; • &nbsp; BUILT FOR THE PIT WALL
 </footer>
-
-<button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo">↑</button>
-
 <script>
 function pitDecision(type){
   const result = document.getElementById('pitResult');
