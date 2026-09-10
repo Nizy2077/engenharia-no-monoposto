@@ -607,10 +607,117 @@ body::before{
   .timeline-row{grid-template-columns:65px 1fr}
 }
 
+
+
+/* ===== F1 EXTREME PACK ===== */
+.f1-launch{
+  position:fixed;inset:0;z-index:20000;background:#050505;
+  display:flex;align-items:center;justify-content:center;flex-direction:column;
+  transition:opacity .6s,visibility .6s;
+}
+.f1-launch.hide{opacity:0;visibility:hidden;pointer-events:none}
+.launch-logo{font:900 clamp(42px,10vw,110px)/.9 Arial,sans-serif;letter-spacing:-5px}
+.launch-logo span{color:#e10600}
+.launch-line{width:min(520px,80vw);height:3px;background:#222;margin:25px 0;overflow:hidden}
+.launch-line i{display:block;height:100%;width:35%;background:#e10600;animation:loadline 1.1s infinite}
+.launch-text{font:700 11px monospace;letter-spacing:4px;color:#777}
+@keyframes loadline{from{transform:translateX(-120%)}to{transform:translateX(350%)}}
+
+.f1-live{
+  max-width:1200px;margin:20px auto;padding:14px 16px;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  background:#090909;border:1px solid #292929;font:700 11px monospace;
+}
+.live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#e10600;margin-right:8px;box-shadow:0 0 10px #e10600;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.25}}
+
+.telemetry{
+  max-width:1200px;margin:30px auto;padding:20px;background:#080808;
+  border:1px solid #2d2d2d;box-shadow:inset 0 0 40px rgba(225,6,0,.03);
+}
+.telemetry-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.telemetry h2{margin:0}
+.telemetry-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:15px 0}
+.sensor{background:#111;border:1px solid #252525;padding:13px}
+.sensor small{display:block;color:#666;font:10px monospace;letter-spacing:1px}
+.sensor strong{font:800 24px monospace}
+.sensor em{font:normal 11px monospace;color:#999}
+.telemetry-controls{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.telemetry-controls button,.strategy button,.lap button{
+  background:#151515;color:#fff;border:1px solid #3a3a3a;padding:10px 13px;cursor:pointer;font-weight:700;
+}
+.telemetry-controls button:hover,.strategy button:hover,.lap button:hover{border-color:#e10600}
+.bar{height:7px;background:#222;margin-top:8px;overflow:hidden}
+.bar i{display:block;height:100%;width:72%;background:#e10600;transition:width .4s}
+
+.car-lab{
+  max-width:1200px;margin:30px auto;padding:20px;background:#0b0b0b;border:1px solid #2b2b2b;
+}
+.car-svg-wrap{background:radial-gradient(circle,#191919,#080808);border:1px solid #222;padding:10px;overflow:hidden}
+.car-svg{width:100%;height:auto;min-height:250px}
+.car-part{cursor:pointer;transition:.2s}
+.car-part:hover{filter:drop-shadow(0 0 8px rgba(225,6,0,.8))}
+.car-info{margin-top:12px;padding:15px;border-left:3px solid #e10600;background:#111;color:#bbb;min-height:60px}
+.car-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.car-legend button{background:#111;border:1px solid #333;color:#ddd;padding:8px 10px;cursor:pointer}
+
+.strategy{max-width:1200px;margin:30px auto;padding:20px;background:#0b0b0b;border:1px solid #2b2b2b}
+.strategy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.strategy-card{padding:15px;background:#111;border:1px solid #252525}
+.strategy-card h3{margin-top:0}
+.strategy-card p{color:#999;font-size:13px;line-height:1.5}
+.strategy-output{margin-top:14px;padding:14px;background:#151515;border-left:3px solid #e10600;color:#ccc}
+
+.track-lab{max-width:1200px;margin:30px auto;padding:20px;background:#090909;border:1px solid #2b2b2b}
+.track{position:relative;width:min(800px,100%);height:300px;margin:15px auto;border:18px solid #202020;border-radius:45% 55% 48% 52%;box-shadow:inset 0 0 0 4px #090909}
+.track::before{content:"";position:absolute;inset:35px 100px;border:10px solid #111;border-radius:50%}
+.car-dot{position:absolute;width:18px;height:10px;border-radius:3px;background:#e10600;box-shadow:0 0 12px #e10600;transition:left .08s,top .08s}
+.track-controls{text-align:center}
+.track-controls input{width:min(600px,90%);accent-color:#e10600}
+
+.lap{max-width:1200px;margin:30px auto;padding:20px;background:#0b0b0b;border:1px solid #2b2b2b;text-align:center}
+.lap-time{font:900 clamp(42px,9vw,82px) monospace;letter-spacing:3px;margin:10px 0}
+.lap-best{color:#999;font:12px monospace}
+
+.searchbox{max-width:1200px;margin:25px auto;padding:16px;background:#0b0b0b;border:1px solid #292929}
+.searchbox input{width:100%;padding:14px;background:#151515;border:1px solid #333;color:#fff;font:15px monospace;outline:none}
+.searchbox input:focus{border-color:#e10600}
+.search-hint{color:#777;font:11px monospace;margin-top:8px}
+
+.progress-topic{
+  max-width:1200px;margin:0 auto 15px;padding:0 5px;
+  display:flex;justify-content:space-between;color:#777;font:11px monospace;
+}
+.progress-topic b{color:#e10600}
+
+.engineer-score{
+  display:inline-block;margin-left:10px;padding:5px 8px;border:1px solid #333;
+  color:#aaa;font:10px monospace;
+}
+
+@media(max-width:900px){
+  .telemetry-grid{grid-template-columns:repeat(2,1fr)}
+  .strategy-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:520px){
+  .telemetry-grid,.strategy-grid{grid-template-columns:1fr}
+  .f1-live{flex-direction:column;align-items:flex-start}
+  .track{height:220px}
+}
+
+
 </style>
+
 </head>
 
 <body id="topo">
+
+<div class="f1-launch" id="launchScreen">
+  <div class="launch-logo">F1<span>//</span>TECH</div>
+  <div class="launch-line"><i></i></div>
+  <div class="launch-text">INITIALIZING ENGINEERING SYSTEMS...</div>
+</div>
+
 <div class="f1-progress" id="progress"></div>
 
     <header>
@@ -690,7 +797,21 @@ body::before{
 
     <div class="f1-strip"></div>
 
-    <main>
+    
+<div class="f1-live">
+  <div><span class="live-dot"></span>ENGINEERING SYSTEM ONLINE</div>
+  <div id="clockF1">00:00:00</div>
+  <div>SESSION: TECHNICAL ANALYSIS</div>
+</div>
+
+
+<section class="searchbox">
+  <input id="topicSearch" type="search" placeholder="🔎 Pesquisar entre os 32 tópicos..." autocomplete="off">
+  <div class="search-hint">Digite uma palavra como “pneu”, “aerodinâmica”, “freio”, “motor”...</div>
+</section>
+
+<main>
+<div class="progress-topic"><span>DOCUMENTO TÉCNICO</span><b id="topicProgress">TÓPICO 01 / 32</b></div>
 
 <section class="hero-f1">
   <div class="eyebrow">FORMULA 1 / TECHNICAL DEPARTMENT</div>
@@ -1218,6 +1339,88 @@ body::before{
   </div>
 </section>
 
+
+<section class="telemetry" id="telemetria">
+  <div class="telemetry-head">
+    <h2>📡 Telemetria ao vivo</h2>
+    <span class="engineer-score">ENGINEER SCORE: <b id="engScore">000</b></span>
+  </div>
+  <div class="telemetry-grid">
+    <div class="sensor"><small>SPEED</small><strong id="speedVal">312</strong> <em>km/h</em><div class="bar"><i id="speedBar"></i></div></div>
+    <div class="sensor"><small>RPM</small><strong id="rpmVal">10,850</strong> <em>rpm</em><div class="bar"><i id="rpmBar"></i></div></div>
+    <div class="sensor"><small>TYRE</small><strong id="tyreVal">92</strong> <em>°C</em><div class="bar"><i id="tyreBar"></i></div></div>
+    <div class="sensor"><small>BRAKE</small><strong id="brakeVal">680</strong> <em>°C</em><div class="bar"><i id="brakeBar"></i></div></div>
+    <div class="sensor"><small>BATTERY</small><strong id="batVal">78</strong> <em>%</em><div class="bar"><i id="batBar"></i></div></div>
+  </div>
+  <div class="telemetry-controls">
+    <button onclick="telemetryMode('push')">⚡ PUSH LAP</button>
+    <button onclick="telemetryMode('normal')">🟢 NORMAL</button>
+    <button onclick="telemetryMode('save')">🔋 SAVE ENERGY</button>
+  </div>
+</section>
+
+
+<section class="car-lab" id="carro-interativo">
+  <h2>🏎️ Anatomia interativa do monoposto</h2>
+  <p>Clique nas partes do carro para descobrir a função de cada região.</p>
+  <div class="car-svg-wrap">
+    <svg class="car-svg" viewBox="0 0 1000 300" role="img" aria-label="Diagrama simplificado de um carro de Fórmula 1">
+      <rect x="90" y="120" width="110" height="28" rx="8" fill="#252525" class="car-part" onclick="carPart('asa')" />
+      <rect x="800" y="120" width="110" height="28" rx="8" fill="#252525" class="car-part" onclick="carPart('asa')" />
+      <ellipse cx="235" cy="180" rx="48" ry="70" fill="#171717" stroke="#444" stroke-width="5" class="car-part" onclick="carPart('pneu')"/>
+      <ellipse cx="765" cy="180" rx="48" ry="70" fill="#171717" stroke="#444" stroke-width="5" class="car-part" onclick="carPart('pneu')"/>
+      <path d="M190 130 L330 105 L430 80 L590 80 L690 105 L810 130 L760 170 L640 175 L560 135 L440 135 L360 175 L240 170 Z" fill="#b00" stroke="#ddd" stroke-width="3" class="car-part" onclick="carPart('aero')"/>
+      <path d="M430 80 L500 45 L570 80 Z" fill="#222" stroke="#aaa" stroke-width="3" class="car-part" onclick="carPart('cockpit')"/>
+      <rect x="455" y="92" width="90" height="38" rx="12" fill="#111" stroke="#777" stroke-width="3" class="car-part" onclick="carPart('cockpit')"/>
+      <path d="M360 110 L640 110 L590 155 L410 155 Z" fill="#161616" stroke="#777" stroke-width="3" class="car-part" onclick="carPart('engine')"/>
+      <path d="M330 175 L670 175 L620 205 L380 205 Z" fill="#202020" stroke="#555" stroke-width="3" class="car-part" onclick="carPart('floor')"/>
+      <text x="500" y="255" text-anchor="middle" fill="#777" font-family="monospace" font-size="14">CLICK THE CAR // TECHNICAL MAP</text>
+    </svg>
+  </div>
+  <div class="car-info" id="carInfo">Selecione uma parte do carro acima.</div>
+  <div class="car-legend">
+    <button onclick="carPart('asa')">Asas</button>
+    <button onclick="carPart('aero')">Aerodinâmica</button>
+    <button onclick="carPart('pneu')">Pneus</button>
+    <button onclick="carPart('engine')">Power Unit</button>
+    <button onclick="carPart('floor')">Assoalho</button>
+    <button onclick="carPart('cockpit')">Cockpit</button>
+  </div>
+</section>
+
+
+<section class="strategy" id="estrategia">
+  <h2>🛞 Simulador de estratégia de pneus</h2>
+  <div class="strategy-grid">
+    <div class="strategy-card"><h3>🔴 SOFT</h3><p>Mais aderência e aquecimento rápido. Em geral, tende a ter maior desgaste.</p><button onclick="chooseStrategy('soft')">Selecionar</button></div>
+    <div class="strategy-card"><h3>🟡 MEDIUM</h3><p>Compromisso entre desempenho, duração e facilidade de gerenciamento.</p><button onclick="chooseStrategy('medium')">Selecionar</button></div>
+    <div class="strategy-card"><h3>⚪ HARD</h3><p>Mais durabilidade e comportamento geralmente mais estável, com menor aderência imediata.</p><button onclick="chooseStrategy('hard')">Selecionar</button></div>
+    <div class="strategy-card"><h3>🌧️ INTER/RAIN</h3><p>Usados quando a pista está molhada, dependendo do nível de água e das condições.</p><button onclick="chooseStrategy('wet')">Selecionar</button></div>
+  </div>
+  <div class="strategy-output" id="strategyOutput">Escolha um composto para receber uma análise.</div>
+</section>
+
+
+<section class="track-lab" id="circuito">
+  <h2>🗺️ Circuito virtual</h2>
+  <p>Controle a posição do carro na pista e imagine a volta acontecendo em tempo real.</p>
+  <div class="track"><div class="car-dot" id="carDot"></div></div>
+  <div class="track-controls">
+    <input id="trackSlider" type="range" min="0" max="100" value="0" oninput="moveCar(this.value)">
+    <div><span id="trackPercent">0%</span> da volta</div>
+  </div>
+</section>
+
+<section class="lap" id="cronometro">
+  <h2>⏱️ Cronômetro de volta</h2>
+  <div class="lap-time" id="lapTime">00:00.000</div>
+  <div class="lap-best">Melhor volta: <span id="bestLap">--:---.---</span></div>
+  <br>
+  <button onclick="startLap()">▶ Iniciar</button>
+  <button onclick="stopLap()">■ Parar</button>
+  <button onclick="resetLap()">↻ Resetar</button>
+</section>
+
 </main>
 
     <a class="top-button" href="#topo" aria-label="Voltar ao topo">↑</a>
@@ -1256,6 +1459,167 @@ document.querySelectorAll('img').forEach((img, index) => {
     img.title = 'Imagem não encontrada: ' + (img.getAttribute('src') || '');
   });
 });
+</script>
+
+
+<div class="footer-f1">
+  F1 // ENGINEERING ARCHIVE &nbsp; • &nbsp; 32 TOPICS &nbsp; • &nbsp; INTERACTIVE TECH LAB<br>
+  <span style="color:#555">A página é um projeto educacional e usa modelos simplificados para fins didáticos.</span>
+</div>
+
+
+<script>
+/* Launch screen */
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('launchScreen')?.classList.add('hide'), 1200);
+  updateTopic();
+});
+
+/* Clock */
+setInterval(() => {
+  const d = new Date();
+  const el = document.getElementById('clockF1');
+  if(el) el.textContent = d.toLocaleTimeString('pt-BR');
+}, 1000);
+
+/* Telemetry */
+let telemTimer = setInterval(() => {
+  const speed = 290 + Math.floor(Math.random()*45);
+  const rpm = 9800 + Math.floor(Math.random()*1300);
+  const tyre = 84 + Math.floor(Math.random()*24);
+  const brake = 520 + Math.floor(Math.random()*260);
+  const bat = 55 + Math.floor(Math.random()*40);
+  setTelemetry(speed,rpm,tyre,brake,bat);
+}, 900);
+
+function setTelemetry(s,r,t,b,bat){
+  const vals = {
+    speedVal:s, rpmVal:r.toLocaleString('en-US'), tyreVal:t, brakeVal:b, batVal:bat
+  };
+  Object.keys(vals).forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=vals[id]});
+  const bars = {
+    speedBar:Math.min(100,s/3.5), rpmBar:Math.min(100,r/120), tyreBar:Math.min(100,t/1.2),
+    brakeBar:Math.min(100,b/8), batBar:bat
+  };
+  Object.keys(bars).forEach(id=>{const e=document.getElementById(id);if(e)e.style.width=bars[id]+'%'});
+}
+function telemetryMode(mode){
+  clearInterval(telemTimer);
+  if(mode==='push'){
+    setTelemetry(335,11800,106,790,52);
+    telemTimer=setInterval(()=>setTelemetry(320+Math.floor(Math.random()*22),11500+Math.floor(Math.random()*500),98+Math.floor(Math.random()*15),700+Math.floor(Math.random()*100),40+Math.floor(Math.random()*20)),700);
+  } else if(mode==='save'){
+    setTelemetry(245,8200,82,480,91);
+    telemTimer=setInterval(()=>setTelemetry(235+Math.floor(Math.random()*25),7800+Math.floor(Math.random()*700),78+Math.floor(Math.random()*10),430+Math.floor(Math.random()*70),85+Math.floor(Math.random()*10)),1100);
+  } else {
+    telemTimer=setInterval(()=>setTelemetry(290+Math.floor(Math.random()*45),9800+Math.floor(Math.random()*1300),84+Math.floor(Math.random()*24),520+Math.floor(Math.random()*260),55+Math.floor(Math.random()*40)),900);
+  }
+}
+
+/* Interactive car */
+function carPart(part){
+  const info={
+    asa:'🪽 ASAS: controlam grande parte do equilíbrio entre carga aerodinâmica e arrasto.',
+    aero:'🌬️ AERODINÂMICA: o objetivo é gerar carga útil sem criar resistência desnecessária.',
+    pneu:'🛞 PNEUS: são a interface entre o monoposto e o asfalto; temperatura, pressão e desgaste influenciam o desempenho.',
+    engine:'🔥 POWER UNIT: reúne motor de combustão, sistemas elétricos e gerenciamento eletrônico.',
+    floor:'⬇️ ASSOALHO: região essencial para produzir efeito aerodinâmico próximo ao solo.',
+    cockpit:'🧑‍✈️ COCKPIT: área do piloto, integrada à estrutura de segurança do monoposto.'
+  };
+  const e=document.getElementById('carInfo'); if(e)e.textContent=info[part]||'';
+}
+
+/* Strategy */
+function chooseStrategy(type){
+  const data={
+    soft:'🔴 SOFT: boa opção quando é necessário desempenho imediato. O engenheiro precisa monitorar o desgaste e a temperatura.',
+    medium:'🟡 MEDIUM: uma escolha equilibrada quando a equipe quer combinar ritmo e duração.',
+    hard:'⚪ HARD: pode ser interessante quando a prioridade é aumentar a duração do stint e reduzir paradas.',
+    wet:'🌧️ INTER/RAIN: em pista molhada, a escolha depende principalmente da quantidade de água e da evolução das condições.'
+  };
+  const e=document.getElementById('strategyOutput'); if(e)e.textContent=data[type];
+}
+
+/* Virtual track */
+function moveCar(v){
+  v=Number(v);
+  const dot=document.getElementById('carDot');
+  if(!dot)return;
+  const angle=(-90 + v*3.6)*Math.PI/180;
+  const rx=40, ry=38;
+  const x=50 + Math.cos(angle)*rx;
+  const y=50 + Math.sin(angle)*ry;
+  dot.style.left=x+'%'; dot.style.top=y+'%';
+  document.getElementById('trackPercent').textContent=v+'%';
+}
+
+/* Lap timer */
+let lapStart=0, lapRAF=null, running=false, best=Infinity;
+function formatLap(ms){
+  const total=Math.max(0,ms), min=Math.floor(total/60000);
+  const sec=Math.floor((total%60000)/1000);
+  const mil=Math.floor(total%1000);
+  return String(min).padStart(2,'0')+':'+String(sec).padStart(2,'0')+'.'+String(mil).padStart(3,'0');
+}
+function lapTick(){
+  if(!running)return;
+  document.getElementById('lapTime').textContent=formatLap(performance.now()-lapStart);
+  lapRAF=requestAnimationFrame(lapTick);
+}
+function startLap(){
+  if(running)return;
+  running=true; lapStart=performance.now(); lapTick();
+}
+function stopLap(){
+  if(!running)return;
+  running=false; cancelAnimationFrame(lapRAF);
+  const t=performance.now()-lapStart;
+  document.getElementById('lapTime').textContent=formatLap(t);
+  if(t<best){best=t;document.getElementById('bestLap').textContent=formatLap(t)}
+}
+function resetLap(){
+  running=false;cancelAnimationFrame(lapRAF);
+  document.getElementById('lapTime').textContent='00:00.000';
+}
+
+/* Search topics */
+const searchInput=document.getElementById('topicSearch');
+if(searchInput){
+  searchInput.addEventListener('input',()=>{
+    const q=searchInput.value.trim().toLowerCase();
+    document.querySelectorAll('main h2').forEach(h=>{
+      const section=h.closest('section, article, div');
+      if(!section)return;
+      if(!q){section.style.display='';return}
+      section.style.display=h.textContent.toLowerCase().includes(q)?'':'none';
+    });
+  });
+}
+
+/* Current topic indicator */
+function updateTopic(){
+  const heads=[...document.querySelectorAll('main h2[id^="topico"]')];
+  if(!heads.length)return;
+  let current=heads[0];
+  const y=window.scrollY+150;
+  heads.forEach(h=>{if(h.offsetTop<=y)current=h});
+  const n=(current.id.match(/\d+/)||['1'])[0];
+  const el=document.getElementById('topicProgress');
+  if(el)el.textContent='TÓPICO '+String(n).padStart(2,'0')+' / 32';
+}
+window.addEventListener('scroll',updateTopic,{passive:true});
+
+/* Engineer score from choices */
+const oldPitDecision=window.pitDecision;
+window.pitDecision=function(type){
+  if(typeof oldPitDecision==='function')oldPitDecision(type);
+  const score=document.getElementById('engScore');
+  if(score){
+    let n=Number(score.textContent)||0;
+    n+=25;
+    score.textContent=String(Math.min(999,n)).padStart(3,'0');
+  }
+};
 </script>
 
 </body>
