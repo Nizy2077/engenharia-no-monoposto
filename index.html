@@ -177,6 +177,49 @@ h2::before {
 }
 
 
+
+/* =========================
+   BARRA DE NAVEGAÇÃO
+========================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 10px;
+    background: rgba(10, 10, 10, 0.98);
+    border-bottom: 2px solid #e10600;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+}
+
+nav a {
+    display: inline-block;
+    margin: 3px;
+    padding: 7px 10px;
+    color: white;
+    background: #1a1a1a;
+    border: 1px solid #b82121;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #e10600;
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+h2 {
+    scroll-margin-top: 75px;
+}
+
 /* =========================
    CELULAR
 ========================= */
@@ -247,9 +290,45 @@ h2::before {
     </header>
 
 
+
+    <nav aria-label="Navegação pelos tópicos">
+        <a href="#topico1">01</a>
+        <a href="#topico2">02</a>
+        <a href="#topico3">03</a>
+        <a href="#topico4">04</a>
+        <a href="#topico5">05</a>
+        <a href="#topico6">06</a>
+        <a href="#topico7">07</a>
+        <a href="#topico8">08</a>
+        <a href="#topico9">09</a>
+        <a href="#topico10">10</a>
+        <a href="#topico11">11</a>
+        <a href="#topico12">12</a>
+        <a href="#topico13">13</a>
+        <a href="#topico14">14</a>
+        <a href="#topico15">15</a>
+        <a href="#topico16">16</a>
+        <a href="#topico17">17</a>
+        <a href="#topico18">18</a>
+        <a href="#topico19">19</a>
+        <a href="#topico20">20</a>
+        <a href="#topico21">21</a>
+        <a href="#topico22">22</a>
+        <a href="#topico23">23</a>
+        <a href="#topico24">24</a>
+        <a href="#topico25">25</a>
+        <a href="#topico26">26</a>
+        <a href="#topico27">27</a>
+        <a href="#topico28">28</a>
+        <a href="#topico29">29</a>
+        <a href="#topico30">30</a>
+        <a href="#topico31">31</a>
+        <a href="#topico32">32</a>
+    </nav>
+
     <main>
 
-        <h2>
+        <h2 id="topico1">
             1. Aerodinâmica Avançada
             (A Ciência da Invisibilidade)
         </h2>
@@ -299,7 +378,7 @@ h2::before {
         <img src="F1_1.jpg" alt="Aerodinâmica de um carro de Fórmula 1">
 
 
-        <h2>
+        <h2 id="topico2">
             2. Unidade de Potência Híbrida
             (Power Unit)
         </h2>
@@ -335,7 +414,7 @@ h2::before {
         <img src="F1_22.jpg" alt="Unidade de potência de Fórmula 1">
 
 
-        <h2>
+        <h2 id="topico3">
             3. Ciência de Materiais e Chassi
             (O Monocoque)
         </h2>
@@ -366,7 +445,7 @@ h2::before {
         <img src="F1_2.jpg" alt="Chassi e Halo de um carro de Fórmula 1">
 
 
-        <h2>
+        <h2 id="topico4">
             4. Dinâmica Veicular e Suspensão
         </h2>
 
@@ -391,7 +470,7 @@ h2::before {
         <img src="F1_3.jpg" alt="Suspensão de um carro de Fórmula 1">
 
 
-        <h2>
+        <h2 id="topico5">
             5. Eletrônica, Telemetria e Simulação
         </h2>
 
@@ -428,7 +507,7 @@ h2::before {
 
         <img src="F1_5.jpg" alt="Tecnologia e engenharia na Fórmula 1">
 
-        <h2>6. Transmissão e Câmbio Sem Costura (Seamless Gearbox)</h2>
+        <h2 id="topico6">6. Transmissão e Câmbio Sem Costura (Seamless Gearbox)</h2>
 
 <p>A transmissão de um Fórmula é uma obra-prima de engenharia mecânica de precisão. Ela precisa canalizar cerca de 1.000 cavalos de potência para as rodas traseiras através de uma caixa que pesa uma fração de um câmbio de rua.</p>
 
@@ -439,7 +518,7 @@ h2::before {
 <img src="F1_6.jpg" alt="">
 
 
-<h2>7. Tribologia e Gerenciamento Térmico</h2>
+<h2 id="topico7">7. Tribologia e Gerenciamento Térmico</h2>
 
 <p>Com motores girando em rotações extremamente altas e componentes elétricos de alta voltagem sob uma carenagem compacta, o controle de temperatura e atrito é um dos maiores desafios.</p>
 
@@ -450,7 +529,7 @@ h2::before {
 <img src="F1_7.jpg" alt="">
 
 
-<h2>8. Sistemas de Freio de Carbono-Carbono</h2>
+<h2 id="topico8">8. Sistemas de Freio de Carbono-Carbono</h2>
 
 <p>Parar um carro que está a 340 km/h exige uma enorme capacidade de dissipação de energia. Os freios de um monoposto transformam energia cinética em calor quase instantaneamente.</p>
 
@@ -463,7 +542,7 @@ h2::before {
 <img src="F1_8.jpg" alt="">
 
 
-<h2>9. Engenharia de Pneus (A Única Conexão com o Solo)</h2>
+<h2 id="topico9">9. Engenharia de Pneus (A Única Conexão com o Solo)</h2>
 
 <p>De nada adianta ter grande potência e toneladas de downforce se os pneus não conseguirem transferir isso para o asfalto.</p>
 
@@ -476,7 +555,7 @@ h2::before {
 <img src="F1_9.jpg" alt="">
 
 
-<h2>10. Dinâmica dos Fluidos Computacional (CFD) e Aeroelasticidade</h2>
+<h2 id="topico10">10. Dinâmica dos Fluidos Computacional (CFD) e Aeroelasticidade</h2>
 
 <p>A aerodinâmica moderna não estuda o carro apenas como um objeto estático. O ar é um fluido complexo e o carro está constantemente em movimento.</p>
 
@@ -487,7 +566,7 @@ h2::before {
 <img src="F1_10.jpg" alt="">
 
 
-<h2>11. Sistema de Combustível e Hidráulica de Alta Pressão</h2>
+<h2 id="topico11">11. Sistema de Combustível e Hidráulica de Alta Pressão</h2>
 
 <p>Abaixo da carenagem existem sistemas que trabalham sob pressões extremamente altas para garantir respostas rápidas aos comandos.</p>
 
@@ -498,7 +577,7 @@ h2::before {
 <img src="F1_11.jpg" alt="">
 
 
-<h2>12. Cinemática de Suspensão e o Efeito de "Anti-Mergulho"</h2>
+<h2 id="topico12">12. Cinemática de Suspensão e o Efeito de "Anti-Mergulho"</h2>
 
 <p>A geometria mecânica de um monoposto é projetada para combater os efeitos da inércia sem depender exclusivamente dos amortecedores.</p>
 
@@ -509,7 +588,7 @@ h2::before {
 <img src="F1_12.jpg" alt="">
 
 
-<h2>13. A Célula de Sobrevivência e Dissipação de Energia</h2>
+<h2 id="topico13">13. A Célula de Sobrevivência e Dissipação de Energia</h2>
 
 <p>A engenharia de segurança de um monoposto é projetada para proteger o piloto durante impactos de alta velocidade.</p>
 
@@ -520,7 +599,7 @@ h2::before {
 <img src="F1_13.jpg" alt="">
 
 
-<h2>14. Engenharia Química e Formulação de Combustíveis</h2>
+<h2 id="topico14">14. Engenharia Química e Formulação de Combustíveis</h2>
 
 <p>O combustível de um monoposto moderno é desenvolvido em nível molecular para maximizar a eficiência do motor.</p>
 
@@ -531,7 +610,7 @@ h2::before {
 <img src="F1_14.jpg" alt="">
 
 
-<h2>15. A Interface Homem-Máquina (O Volante)</h2>
+<h2 id="topico15">15. A Interface Homem-Máquina (O Volante)</h2>
 
 <p>O volante de um monoposto não serve apenas para esterçar as rodas. Ele concentra diversos comandos eletrônicos utilizados pelo piloto.</p>
 
@@ -542,7 +621,7 @@ h2::before {
 <img src="F1_15.jpg" alt="">
 
 
-<h2>16. Microgeometria e o Fenômeno da "Camada Limite"</h2>
+<h2 id="topico16">16. Microgeometria e o Fenômeno da "Camada Limite"</h2>
 
 <p>Na aerodinâmica avançada, pequenas diferenças no fluxo de ar podem alterar significativamente o comportamento do carro.</p>
 
@@ -553,7 +632,7 @@ h2::before {
 <img src="F1_16.jpg" alt="">
 
 
-<h2>17. Sensores de Matriz Óptica e Pitot</h2>
+<h2 id="topico17">17. Sensores de Matriz Óptica e Pitot</h2>
 
 <p>Durante os testes, os carros se transformam em verdadeiros laboratórios de diagnóstico.</p>
 
@@ -564,7 +643,7 @@ h2::before {
 <img src="F1_17.jpg" alt="">
 
 
-<h2>18. Metalurgia e Tratamento Térmico</h2>
+<h2 id="topico18">18. Metalurgia e Tratamento Térmico</h2>
 
 <p>Dentro do motor e da transmissão, os materiais são submetidos a pressões, temperaturas e rotações extremamente altas.</p>
 
@@ -575,7 +654,7 @@ h2::before {
 <img src="F1_18.jpg" alt="">
 
 
-<h2>19. Inteligência Artificial e Algoritmos Gêmeos Digitais</h2>
+<h2 id="topico19">19. Inteligência Artificial e Algoritmos Gêmeos Digitais</h2>
 
 <p>Durante um fim de semana de corrida, os dados do carro podem ser comparados com modelos digitais desenvolvidos pela equipe.</p>
 
@@ -586,7 +665,7 @@ h2::before {
 <img src="F1_19.jpg" alt="">
 
 
-<h2>20. Engenharia Acústica e Atuação Pneumática de Válvulas</h2>
+<h2 id="topico20">20. Engenharia Acústica e Atuação Pneumática de Válvulas</h2>
 
 <p>Molas metálicas convencionais enfrentam limitações quando o motor trabalha em rotações extremamente altas.</p>
 
@@ -595,7 +674,7 @@ h2::before {
 <img src="F1_20.jpg" alt="">
 
 
-<h2>21. Escalonamento Micro-Mecânico e Lastro Eficiente</h2>
+<h2 id="topico21">21. Escalonamento Micro-Mecânico e Lastro Eficiente</h2>
 
 <p>O peso mínimo de um monoposto é definido pelo regulamento, por isso os engenheiros procuram controlar cuidadosamente a distribuição de massa.</p>
 
@@ -606,7 +685,7 @@ h2::before {
 <img src="F1_21.jpg" alt="">
 
 
-<h2>22. Piezoeletricidade e Atuadores Atômicos na Injeção</h2>
+<h2 id="topico22">22. Piezoeletricidade e Atuadores Atômicos na Injeção</h2>
 
 <p>A precisão mecânica convencional pode não ser suficiente para controlar a injeção de combustível em tempos extremamente curtos.</p>
 
@@ -615,7 +694,7 @@ h2::before {
 <img src="F1_222.jpg" alt="">
 
 
-<h2>23. Nanotecnologia e Engenharia de Superfície Hidrofóbica</h2>
+<h2 id="topico23">23. Nanotecnologia e Engenharia de Superfície Hidrofóbica</h2>
 
 <p>A água da chuva e os detritos da pista podem alterar o comportamento aerodinâmico do carro.</p>
 
@@ -624,7 +703,7 @@ h2::before {
 <img src="F1_23.jpg" alt="">
 
 
-<h2>24. Engenharia de Turbinas com Geometria de Voluta Dupla</h2>
+<h2 id="topico24">24. Engenharia de Turbinas com Geometria de Voluta Dupla</h2>
 
 <p>O turbocompressor trabalha em regimes de rotação extremamente elevados e precisa funcionar de maneira eficiente em diferentes condições.</p>
 
@@ -633,7 +712,7 @@ h2::before {
 <img src="F1_24.jpg" alt="">
 
 
-<h2>25. Estruturas de Matriz Metálica (MMC) e Intermetálicos</h2>
+<h2 id="topico25">25. Estruturas de Matriz Metálica (MMC) e Intermetálicos</h2>
 
 <p>Quando a fibra de carbono não pode ser utilizada, materiais metálicos avançados podem oferecer uma combinação de baixo peso e resistência.</p>
 
@@ -642,7 +721,7 @@ h2::before {
 <img src="F1_25.jpg" alt="">
 
 
-<h2>26. Termografia Ativa e Gerenciamento da Bateria</h2>
+<h2 id="topico26">26. Termografia Ativa e Gerenciamento da Bateria</h2>
 
 <p>O sistema de armazenamento de energia do monoposto precisa controlar cuidadosamente temperatura e desempenho.</p>
 
@@ -651,7 +730,7 @@ h2::before {
 <img src="F1_26.jpg" alt="">
 
 
-<h2>27. Cinemática Elastocinemática dos Braços de Suspensão</h2>
+<h2 id="topico27">27. Cinemática Elastocinemática dos Braços de Suspensão</h2>
 
 <p>Os braços da suspensão podem ser projetados para apresentar pequenas deformações controladas quando submetidos a diferentes forças.</p>
 
@@ -660,7 +739,7 @@ h2::before {
 <img src="F1_27.jpg" alt="">
 
 
-<h2>28. Neuroengenharia e Telemetria Biométrica</h2>
+<h2 id="topico28">28. Neuroengenharia e Telemetria Biométrica</h2>
 
 <p>O piloto também pode ser considerado parte importante do sistema do monoposto, e diferentes tecnologias podem monitorar suas condições durante a corrida.</p>
 
@@ -670,7 +749,7 @@ h2::before {
 
 
 
-<h2>29. Capitação e Dinâmica de Fluidos Transiente em Bombas</h2>
+<h2 id="topico29">29. Capitação e Dinâmica de Fluidos Transiente em Bombas</h2>
 
 <p>Com o carro submetido a grandes forças laterais, manter os fluidos circulando corretamente é um grande desafio.</p>
 
@@ -681,7 +760,7 @@ h2::before {
 <img src="F1_29.jpg" alt="">
 
 
-<h2>30. Tribofilmologia e Aditivação de Óleos</h2>
+<h2 id="topico30">30. Tribofilmologia e Aditivação de Óleos</h2>
 
 <p>O óleo de um motor de competição não serve apenas para lubrificar. Ele também ajuda a proteger as superfícies dos componentes.</p>
 
@@ -690,7 +769,7 @@ h2::before {
 <img src="F1_30.jpg" alt="">
 
 
-<h2>31. Otimização de Topologia e Manufatura Aditiva de Titânio</h2>
+<h2 id="topico31">31. Otimização de Topologia e Manufatura Aditiva de Titânio</h2>
 
 <p>Muitas peças modernas possuem formas complexas projetadas para oferecer máxima resistência com o menor peso possível.</p>
 
@@ -701,7 +780,7 @@ h2::before {
 <img src="F1_31.jpg" alt="">
 
 
-<h2>32. Acoplamento Aero-Térmico do Diffuser Blow Moderno</h2>
+<h2 id="topico32">32. Acoplamento Aero-Térmico do Diffuser Blow Moderno</h2>
 
 <p>Os engenheiros utilizam os efeitos térmicos e aerodinâmicos do fluxo de gases para otimizar o comportamento do difusor.</p>
 
