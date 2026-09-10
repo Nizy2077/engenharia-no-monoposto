@@ -220,6 +220,138 @@ h2 {
     scroll-margin-top: 75px;
 }
 
+
+/* =========================
+   PAINEL F1 / CATEGORIAS
+========================= */
+
+.nav-title {
+    color: #e10600;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.nav-category {
+    display: inline-block;
+    margin: 4px 3px;
+    padding: 5px 8px;
+    border-radius: 3px;
+    background: #222;
+    color: #aaa;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a {
+    position: relative;
+    overflow: hidden;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transition: 0.25s;
+}
+
+nav a:hover::after {
+    left: 0;
+}
+
+/* Animação de entrada dos tópicos */
+h2 {
+    animation: topicAppear 0.7s ease both;
+}
+
+@keyframes topicAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Botão voltar ao topo */
+.top-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #e10600;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+    transition: 0.25s;
+}
+
+.top-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: #b00000;
+}
+
+/* Pequeno indicador visual de equipe */
+.f1-strip {
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 5px;
+    background: repeating-linear-gradient(
+        135deg,
+        #e10600 0px,
+        #e10600 14px,
+        white 14px,
+        white 28px,
+        #111 28px,
+        #111 42px
+    );
+}
+
+/* Melhor navegação em telas pequenas */
+@media (max-width: 600px) {
+    nav {
+        padding: 8px 5px;
+        max-height: 155px;
+        overflow-y: auto;
+    }
+
+    nav a {
+        padding: 6px 8px;
+        margin: 2px;
+        font-size: 11px;
+    }
+
+    .nav-category {
+        display: none;
+    }
+
+    .top-button {
+        width: 42px;
+        height: 42px;
+        right: 12px;
+        bottom: 12px;
+    }
+}
+
 /* =========================
    CELULAR
 ========================= */
@@ -259,7 +391,7 @@ h2 {
 
 </head>
 
-<body>
+<body id="topo">
 
     <header>
 
@@ -292,39 +424,51 @@ h2 {
 
 
     <nav aria-label="Navegação pelos tópicos">
-        <a href="#topico1">01</a>
-        <a href="#topico2">02</a>
-        <a href="#topico3">03</a>
-        <a href="#topico4">04</a>
-        <a href="#topico5">05</a>
-        <a href="#topico6">06</a>
-        <a href="#topico7">07</a>
-        <a href="#topico8">08</a>
-        <a href="#topico9">09</a>
-        <a href="#topico10">10</a>
-        <a href="#topico11">11</a>
-        <a href="#topico12">12</a>
-        <a href="#topico13">13</a>
-        <a href="#topico14">14</a>
-        <a href="#topico15">15</a>
-        <a href="#topico16">16</a>
-        <a href="#topico17">17</a>
-        <a href="#topico18">18</a>
-        <a href="#topico19">19</a>
-        <a href="#topico20">20</a>
-        <a href="#topico21">21</a>
-        <a href="#topico22">22</a>
-        <a href="#topico23">23</a>
-        <a href="#topico24">24</a>
-        <a href="#topico25">25</a>
-        <a href="#topico26">26</a>
-        <a href="#topico27">27</a>
-        <a href="#topico28">28</a>
-        <a href="#topico29">29</a>
-        <a href="#topico30">30</a>
-        <a href="#topico31">31</a>
-        <a href="#topico32">32</a>
+        <div class="nav-title">F1 // Technical Engineering</div>
+
+        <span class="nav-category">01–05 • Base</span>
+        <span class="nav-category">06–12 • Mecânica</span>
+        <span class="nav-category">13–18 • Materiais</span>
+        <span class="nav-category">19–24 • Tecnologia</span>
+        <span class="nav-category">25–32 • Avançado</span>
+
+        <div>
+            <a href="#topico1">01</a>
+            <a href="#topico2">02</a>
+            <a href="#topico3">03</a>
+            <a href="#topico4">04</a>
+            <a href="#topico5">05</a>
+            <a href="#topico6">06</a>
+            <a href="#topico7">07</a>
+            <a href="#topico8">08</a>
+            <a href="#topico9">09</a>
+            <a href="#topico10">10</a>
+            <a href="#topico11">11</a>
+            <a href="#topico12">12</a>
+            <a href="#topico13">13</a>
+            <a href="#topico14">14</a>
+            <a href="#topico15">15</a>
+            <a href="#topico16">16</a>
+            <a href="#topico17">17</a>
+            <a href="#topico18">18</a>
+            <a href="#topico19">19</a>
+            <a href="#topico20">20</a>
+            <a href="#topico21">21</a>
+            <a href="#topico22">22</a>
+            <a href="#topico23">23</a>
+            <a href="#topico24">24</a>
+            <a href="#topico25">25</a>
+            <a href="#topico26">26</a>
+            <a href="#topico27">27</a>
+            <a href="#topico28">28</a>
+            <a href="#topico29">29</a>
+            <a href="#topico30">30</a>
+            <a href="#topico31">31</a>
+            <a href="#topico32">32</a>
+        </div>
     </nav>
+
+    <div class="f1-strip"></div>
 
     <main>
 
@@ -791,6 +935,8 @@ h2 {
 <img src="F1_32.jpg" alt="">
 
     </main>
+
+    <a class="top-button" href="#topo" aria-label="Voltar ao topo">↑</a>
 
 </body>
 
